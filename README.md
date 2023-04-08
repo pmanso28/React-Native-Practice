@@ -1,4 +1,4 @@
-<img src="assets/logoApp.png" width="480">
+<img src="janki\assets\logoApp.png" width="480">
 
 A project to test how well I know how to code in React Native.
 

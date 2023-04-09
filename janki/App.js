@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image, FlatList} from 'react-native';
+import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList} from 'react-native';
 import { useState } from 'react';
 
 
 export default function App() {
+
+  const [pesquisado,setPesquisado] = useState('')
 
   const [decks, setDecks] = useState([
     {deck: 'Kanji 1', key: 1 },
@@ -18,6 +20,7 @@ export default function App() {
   return (
 
     <View style={styles.container}>
+
       <View style={styles.header}>
         <Image
         style={styles.tinyLogo}
@@ -25,17 +28,28 @@ export default function App() {
         />
         <Text style={styles.titleHome}>HOME</Text>
       </View>
+
       <View style={styles.ladoalado}>
-          <FlatList style={styles.lista}
-          numColumns={1}
-          keyExtractor={(item) => item.key}
-          data={decks}
-          renderItem={({item}) => (
-              <Text style={styles.quadrado}>{item.deck}</Text>
-          )}
-          /> 
+        <FlatList style={styles.lista}
+        numColumns={1}
+        keyExtractor={(item) => item.key}
+        data={decks}
+        renderItem={({item}) => (
+          <Text style={styles.quadrado}>{item.deck}</Text>
+        )}
+        />
+
         <View style={styles.pesquisa}>
-        </View>
+          <TextInput
+            onChangeText={setPesquisado}
+            placeholder= 'Pesquisar' ></TextInput>
+    
+            {pesquisado != ''  ?
+            <Text>Nenhum resultado com {pesquisado} foi encontrado!</Text>
+            : 
+            <Text></Text>}
+
+        </View> 
       </View>
 
       <View style={styles.botoes}>
@@ -76,13 +90,19 @@ const styles = StyleSheet.create({
   ladoalado: {
     flex: 1,
     flexDirection:'row',
-    maxWidth: '50%',
+    maxWidth: '100%',
 
   },
 
   lista: { 
     //Disposição na tela
-    backgroundColor: 'red',
+    backgroundColor: 'white',
+    borderRightWidth:  2,
+    width: '50%',
+  },
+
+  textoDecks:{
+    fontSize: 24,
   },
 
   quadrado:{
@@ -91,7 +111,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
 
     //Configuração das caixas
-    backgroundColor: 'lightblue',
+    backgroundColor: 'rgba(253, 216, 182, 0.44)',
     width: 120,
     height: 80,
     paddingTop: 20,
@@ -101,7 +121,8 @@ const styles = StyleSheet.create({
     },
 
     pesquisa: {
-      backgroundColor: 'blue',
+      backgroundColor: 'white',
+      width: '50%'
     },
 
     botoes: {

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList} from 'react-native';
+import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList, TouchableOpacity} from 'react-native';
 import { useState } from 'react';
 
 
@@ -30,25 +30,32 @@ export default function App() {
       </View>
 
       <View style={styles.ladoalado}>
+        <View style={styles.ladoum}>
+          <Text style={styles.label}>Seus Decks</Text>
         <FlatList style={styles.lista}
         numColumns={1}
         keyExtractor={(item) => item.key}
         data={decks}
         renderItem={({item}) => (
+          <TouchableOpacity>
           <Text style={styles.quadrado}>{item.deck}</Text>
+          </TouchableOpacity>
         )}
         />
+        </View>
 
         <View style={styles.pesquisa}>
-          <TextInput
-            onChangeText={setPesquisado}
-            placeholder= 'Pesquisar' ></TextInput>
-    
-            {pesquisado != ''  ?
-            <Text>Nenhum resultado com {pesquisado} foi encontrado!</Text>
-            : 
-            <Text></Text>}
-
+            <Text style={styles.label}>Pesquisar Decks</Text>
+          <ScrollView>
+            <TextInput
+              onChangeText={setPesquisado}
+              placeholder= 'Pesquisar' ></TextInput>
+      
+              {pesquisado != ''  ?
+              <Text>Nenhum resultado com {pesquisado} foi encontrado!</Text>
+              : 
+              <Text></Text>}
+          </ScrollView>
         </View> 
       </View>
 
@@ -94,15 +101,26 @@ const styles = StyleSheet.create({
 
   },
 
+  ladoum:{
+    flex: 1,
+    flexDirection: 'column',
+    Width: '50%',
+    borderRightWidth:  2,
+  },
+
   lista: { 
     //Disposição na tela
     backgroundColor: 'white',
-    borderRightWidth:  2,
-    width: '50%',
+
   },
 
   textoDecks:{
     fontSize: 24,
+  },
+
+  label:{
+    fontSize: 18,
+    alignSelf: 'center' //Redundante para o segundo lado, apenas referente ao primeiro
   },
 
   quadrado:{
@@ -121,7 +139,7 @@ const styles = StyleSheet.create({
     },
 
     pesquisa: {
-      backgroundColor: 'white',
+      alignItems: 'center',
       width: '50%'
     },
 

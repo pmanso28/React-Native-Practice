@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList, TouchableOpacity, Button} from 'react-native';
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -69,6 +69,9 @@ export default function App() {
       </View>
 
       <View style={styles.botoes}>
+      <Button
+        title="Learn More"
+        color="#841584"/>
       </View>
     </View>
   );
@@ -170,6 +173,8 @@ const styles = StyleSheet.create({
     },
 
     botoes: {
-      backgroundColor: 'purple',
+      backgroundColor: 'white',
+      borderTopWidth: 2,
+      height: '30%',
     },
 });

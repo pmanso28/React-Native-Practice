@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList, TouchableOpacity} from 'react-native';
 import { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
 
 
 export default function App() {
@@ -32,7 +33,7 @@ export default function App() {
       <View style={styles.ladoalado}>
         <View style={styles.ladoum}>
           <Text style={styles.label}>Seus Decks</Text>
-        <FlatList style={styles.lista}
+        <FlatList
         numColumns={1}
         keyExtractor={(item) => item.key}
         data={decks}
@@ -47,12 +48,20 @@ export default function App() {
         <View style={styles.pesquisa}>
             <Text style={styles.label}>Pesquisar Decks</Text>
           <ScrollView>
-            <TextInput
-              onChangeText={setPesquisado}
-              placeholder= 'Pesquisar' ></TextInput>
+            <View style={styles.caixaPesquisa}>
+
+              <Ionicons name="search" size={12} style= {styles.icon}/>
+
+              <TextInput
+                style={styles.input}
+                onChangeText={setPesquisado}
+                multiline
+                placeholder= 'Digite para pesquisar' >
+              </TextInput>
+            </View>
       
               {pesquisado != ''  ?
-              <Text>Nenhum resultado com {pesquisado} foi encontrado!</Text>
+              <Text style={styles.printado}>Nenhum resultado com {pesquisado} foi encontrado!</Text>
               : 
               <Text></Text>}
           </ScrollView>
@@ -98,7 +107,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection:'row',
     maxWidth: '100%',
-
   },
 
   ladoum:{
@@ -108,19 +116,13 @@ const styles = StyleSheet.create({
     borderRightWidth:  2,
   },
 
-  lista: { 
-    //Disposição na tela
-    backgroundColor: 'white',
-
-  },
-
   textoDecks:{
     fontSize: 24,
   },
 
   label:{
     fontSize: 18,
-    alignSelf: 'center' //Redundante para o segundo lado, apenas referente ao primeiro
+    alignSelf: 'center',
   },
 
   quadrado:{
@@ -139,8 +141,32 @@ const styles = StyleSheet.create({
     },
 
     pesquisa: {
-      alignItems: 'center',
       width: '50%'
+    },
+
+    caixaPesquisa:{
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    icon:{
+      position: 'absolute',
+      left: '6%', 
+      color: "black" 
+    },
+
+    input:{
+      paddingLeft: 20,
+      height: 35,
+      width: 190,
+      borderRadius: 5,
+      borderWidth: 0.5,
+      borderColor: 'grey',
+    },
+
+    printado:{
+      alignSelf: 'center'
     },
 
     botoes: {

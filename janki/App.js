@@ -70,6 +70,7 @@ export default function App() {
 
       <View style={styles.botoes}>
       <Button
+        style={styles.botao}
         title="Learn More"
         color="#841584"/>
       </View>
@@ -176,5 +177,9 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
       borderTopWidth: 2,
       height: '30%',
+    },
+
+    botao:{
+
     },
 });

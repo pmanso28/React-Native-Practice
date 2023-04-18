@@ -1,10 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList, TouchableOpacity, Button} from 'react-native';
+import { StyleSheet, Text, TextInput, View, ScrollView, Image, FlatList, TouchableOpacity, Button, Alert} from 'react-native';
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 
 
 export default function App() {
+
+  const pressImportar = () => {
+    Alert.alert('Importar', 'Esta função ainda não foi implementada.');
+  };
+
+  const pressCriar = () => {
+    Alert.alert('Criar', 'Esta função ainda não foi implementada');
+  };
 
   const [pesquisado,setPesquisado] = useState('')
 
@@ -69,10 +77,14 @@ export default function App() {
       </View>
 
       <View style={styles.botoes}>
-      <Button
-        style={styles.botao}
-        title="Learn More"
-        color="#841584"/>
+        <Button
+        title="Criar Deck"
+        color="rgba(140, 140, 140, 1)"
+        onPress={pressCriar}/>
+        <Button
+        title="Importar"
+        color="rgba(140, 140, 140, 1)"
+        onPress={pressImportar}/>
       </View>
     </View>
   );
@@ -176,10 +188,8 @@ const styles = StyleSheet.create({
     botoes: {
       backgroundColor: 'white',
       borderTopWidth: 2,
-      height: '30%',
-    },
-
-    botao:{
-
+      height: '20%',
+      width: '100%',
+      justifyContent: 'space-around'
     },
 });

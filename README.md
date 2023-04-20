@@ -136,7 +136,7 @@ Downloading all the janki folder from the GitHub repository, after that, using d
 
 `yarn start`
 
-OU
+OR
 
 `npm start`
 
@@ -148,7 +148,7 @@ Download the assets folder and the App.js file from the janki folder on GitHub, 
 
 `yarn create expo-app "Name of your choice"`
 
-OU 
+OR 
 
 `npm create expo-app "Name of your choice"`
 
@@ -156,7 +156,7 @@ On the created app paste the two downloaded files then type:
 
 `yarn start`
 
-OU
+OR
 
 `npm start`
 

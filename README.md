@@ -34,6 +34,60 @@ Usando o framework react native procuro criar um aplicativo com uma complexidade
 
 No momento quero confeccionar e melhorar o design, os reais sistemas virão após o design e o fluxo de telas chegar a um nível satisfatório.
 
+<h5>Como instalar?</h5>
+
+Primeiro, instale o Node.js: <br>
+[Node.js](nodejs.org) <br>
+
+Caso queira, você também pode instalar o yarn, gerenciador de pacotes recomendado pelos criadores do Expo usando:
+
+`npm install --global yarn`
+
+Para verificar se tudo ocorreu como o esperado utilize: 
+
+`yarn --version`
+
+Se aparecer a versão do yarn a instalação foi bem sucedida.
+
+Após isso, instale o Expo Go no seu celular:
+[Expo Go](expo.dev/client)
+
+Para executar o projeto temos duas formas:
+
+<h6>Primeira forma:</h6>
+
+Baixando toda a pasta janki no repositório do github, em seguida usando os comandos dir e cd no terminal abra o diretório
+em que estão baixados os arquivos, já no diretório digite:
+
+`yarn start`
+
+OU
+
+`npm start`
+
+Após isso, usando o aplicativo Expo Go ou a câmera do celular leia o QR code gerado para executar.
+
+<h6>Segunda forma:</h6>
+
+Baixe de dentro da pasta janki no repositório a pasta assets e o App.js, em seguida, no terminal escolha um diretório para
+criar o projeto expo:
+
+`yarn create expo-app "Nome de sua escolha"`
+
+OU 
+
+`npm create expo-app "Nome de sua escolha"`
+
+Na pasta do projeto recém criado coloque os dois arquivos baixados e inicie a aplicação usando: 
+
+`yarn start`
+
+OU
+
+`npm start`
+
+Após isso, usando o aplicativo Expo Go ou a câmera do celular leia o QR code gerado para executar.
+
 ### English
 -------------
 
@@ -54,4 +108,56 @@ similar to ANKI. My proprietary changes will be made to the things that go aroun
 
 <h5>What do we already have?</h5>
 
-Currently, with the knowledge I have, I want to make and better the design to a satisfactory level, the actual sistem will come at a later time when that part is ready.
+Currently, with the knowledge I have, I want to make and better the design to a satisfactory level, the actual system will come at a later date when that part is ready.
+
+<h5>How to install?</h5>
+
+Firstly, install Node.js: <br>
+[Node.js](nodejs.org) <br>
+
+If you want, you can also install yarn, a packet manager recommended by the expo creators using:
+
+`npm install --global yarn`
+
+To check if the installation went as expected type: 
+
+`yarn --version`
+
+If the current yarn version is displayed, then it installed correctly!
+
+After that, install expo on your mobile phone:
+[Expo Go](expo.dev/client)
+
+To run the app there are two main ways:
+
+<h6>First way:</h6>
+
+Downloading all the janki folder from the GitHub repository, after that, using dir and cd on the terminal, open the folder that was just installed and type:
+
+`yarn start`
+
+OU
+
+`npm start`
+
+After that, using the Expo Go or your phone's camera scan the generated QR code to run the app.
+
+<h6>Second way:</h6>
+
+Download the assets folder and the App.js file from the janki folder on GitHub, after that, choose one directory to create the expo app, after choosing type:
+
+`yarn create expo-app "Name of your choice"`
+
+OU 
+
+`npm create expo-app "Name of your choice"`
+
+On the created app paste the two downloaded files then type: 
+
+`yarn start`
+
+OU
+
+`npm start`
+
+After that, using the Expo Go or your phone's camera scan the generated QR code to run the app.

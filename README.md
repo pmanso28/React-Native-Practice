@@ -37,7 +37,7 @@ No momento quero confeccionar e melhorar o design, os reais sistemas virão apó
 <h5>Como instalar?</h5>
 
 Primeiro, instale o Node.js: <br>
-[Node.js](nodejs.org) <br>
+[Node.js](https://nodejs.org) <br>
 
 Caso queira, você também pode instalar o yarn, gerenciador de pacotes recomendado pelos criadores do Expo usando:
 
@@ -50,7 +50,7 @@ Para verificar se tudo ocorreu como o esperado utilize:
 Se aparecer a versão do yarn a instalação foi bem sucedida.
 
 Após isso, instale o Expo Go no seu celular:
-[Expo Go](expo.dev/client)
+[Expo Go](https://expo.dev/client)
 
 Para executar o projeto temos duas formas:
 
@@ -113,7 +113,7 @@ Currently, with the knowledge I have, I want to make and better the design to a 
 <h5>How to install?</h5>
 
 Firstly, install Node.js: <br>
-[Node.js](nodejs.org) <br>
+[Node.js](https://nodejs.org) <br>
 
 If you want, you can also install yarn, a packet manager recommended by the expo creators using:
 
@@ -126,7 +126,7 @@ To check if the installation went as expected type:
 If the current yarn version is displayed, then it installed correctly!
 
 After that, install expo on your mobile phone:
-[Expo Go](expo.dev/client)
+[Expo Go](https://expo.dev/client)
 
 To run the app there are two main ways:
 

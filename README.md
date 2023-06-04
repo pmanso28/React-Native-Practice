@@ -8,6 +8,8 @@ aNki  <br>
 Klone <br>
 I:)
 
+As of now, I haven't had the time to continue with the project, it isn't dead tho
+
 **Languages** <br>
 - [Português](#português)  <br>
 - [English](#english)
